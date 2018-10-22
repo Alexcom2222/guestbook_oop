@@ -5,11 +5,25 @@ class MyClass
     {
         // свойства и методы класса
         public $prop1='свойство класса';
+
+        public function setProperty($newval1)
+            {
+                $this->prop1=$newval1;
+            }
+        public function getProperty()
+            {
+                return $this->prop1.'<br>';
+            }
     }
 
-$obj= new MyClass();
+$obj_one= new MyClass();
+$obj_two= new MyClass();
 
-//var_dump($obj);
+$obj_one->setProperty('Это свойство первого класса.');
+$obj_two->setProperty('Это свойство второго класса.');
 
-echo $obj->prop1;
+echo $obj_one->getProperty();
+echo $obj_two->getProperty();
+
+
 ?>
