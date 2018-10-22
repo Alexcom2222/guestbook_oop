@@ -1,17 +1,15 @@
 <?php
+include_once('header.html');
 
 class MyClass
     {
-        // тут будет что-то про описание класса
-
+        // свойства и методы класса
+        public $prop1='свойство класса';
     }
 
-class AnotherMyClass
-    {
-        // тут будет ещё одно описания моего класса
-    }
+$obj= new MyClass();
 
-class AnotherOneMyClass
-    {
-        // тут будет ещё одно описание моего класса
-    }
+//var_dump($obj);
+
+echo $obj->prop1;
+?>
