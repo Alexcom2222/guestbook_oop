@@ -27,11 +27,21 @@ class MyClass
         }
     }
 
+class MyAnotherClass extends MyClass
+{
+    public function NewMethod()
+    {
+        return 'Новый метод класса: '.__CLASS__.'<br />';
+    }
+}
+
 $obj_one= new MyClass();
 $obj_two= new MyClass();
+$obj_three= new MyAnotherClass();
 
 echo $obj_one->getProperty();
 echo $obj_two->getProperty();
+//echo $obj_three->NewMethod();
 
 echo '<br /><br />';
 
