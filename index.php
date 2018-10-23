@@ -11,7 +11,12 @@ class MyClass
             echo 'создан объект класса '.__CLASS__.'! <br />';
         }
 
-        public function setProperty($newval1)
+        public function __destruct()
+        {
+            echo 'уничтожен объект класса '.__CLASS__.'! <br />';
+        }
+
+    public function setProperty($newval1)
         {
             $this->prop1=$newval1;
         }
@@ -36,5 +41,8 @@ $obj_two->setProperty('Это свойство второго класса.');
 echo $obj_one->getProperty();
 echo $obj_two->getProperty();
 
+unset($obj_one);
 
+
+echo 'Конец файла <br />';
 ?>
