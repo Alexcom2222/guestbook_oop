@@ -3,7 +3,12 @@ include_once('header.html');
 
 class MyClass
     {
-        // свойства и методы класса
+        public function __construct()
+        {
+            echo 'создан объект класса'.__CLASS__.'! <br />';
+        }
+
+    // свойства и методы класса
         public $prop1='свойство класса';
 
         public function setProperty($newval1)
@@ -18,6 +23,11 @@ class MyClass
 
 $obj_one= new MyClass();
 $obj_two= new MyClass();
+
+echo $obj_one->getProperty();
+echo $obj_two->getProperty();
+
+echo '<br /><br />';
 
 $obj_one->setProperty('Это свойство первого класса.');
 $obj_two->setProperty('Это свойство второго класса.');
