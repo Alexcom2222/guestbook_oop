@@ -8,7 +8,7 @@ class MyClass
 
         public function __construct()
         {
-            echo 'создан объект класса'.__CLASS__.'! <br />';
+            echo 'создан объект класса '.__CLASS__.'! <br />';
         }
 
         public function setProperty($newval1)
